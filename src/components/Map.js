@@ -40,7 +40,7 @@ class Map extends React.Component {
     return (
       <div className="map-container">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyA0_VDHRxPPIW5nv4PReVhNXrLwcGVXWwE'}} // Insert your own api key from Google Maps
+          bootstrapURLKeys={{ key: ''}} // Insert your own api key from Google Maps
           defaultCenter={ this.props.center }
           defaultZoom={ this.props.zoom }
           center={{lat: this.state.lat, lng: this.state.lng}}
