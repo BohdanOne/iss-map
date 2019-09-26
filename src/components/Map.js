@@ -41,6 +41,7 @@ class Map extends React.Component {
           bootstrapURLKeys={{ key: ''}} // Insert your own api key from Google Maps
           defaultCenter={ this.props.center }
           defaultZoom={ this.props.zoom }
+          center={{lat: this.state.lat, lng: this.state.lng}}
         >
           <ISS lat={this.state.lat} lng ={this.state.lng} />
         </GoogleMapReact>
