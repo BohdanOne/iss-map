@@ -11,7 +11,7 @@ class App extends React.Component {
       <div className="app-container">
         <header className="heading">
           <img className="logo" src={logo} alt="logo"/>
-          <h1 className="title">Actual Position of International Space Station</h1>
+          <h1 className="title">Find International Space Station!</h1>
         </header>
         <Map />
       </div>

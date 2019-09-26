@@ -8,6 +8,10 @@ class DistanceCounter extends React.Component {
   coords = [ {latitude: this.props.lat, longitude: this.props.lng }];
   distance = 0;
 
+  componentDidMount() {
+    this.startTime = new Date().getTime();
+  }
+
   componentDidUpdate() {
     if (this.counter === 0) {
       this.coords.push({latitude: this.props.lat, longitude: this.props.lng});
@@ -18,16 +22,20 @@ class DistanceCounter extends React.Component {
     let distanceChunk = getDistance(start,end);
     this.coords.push({latitude: this.props.lat, longitude: this.props.lng})
     this.distance += distanceChunk;
+    this.counter++;
+  }
+
+  countSpeed() {
+    return Math.round( this.distance / this.counter );
   }
 
   render() {
     return (
       <div className="distance-counter">
-        <p>Since you're here, ISS traveled the distance of {this.distance} meters.</p>
+        <p>Since you're here: ISS traveled the distance of { this.distance / 1000 } kilometers, with average speed of { this.countSpeed() } m/s.</p>
       </div>
     );
   }
 }
-
 
 export default DistanceCounter;
