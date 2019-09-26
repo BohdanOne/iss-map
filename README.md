@@ -1,4 +1,6 @@
 # International Space Station Map
+![Alt text](./app-screenshot.png?raw=true "App Screenshot")
+
 
 App written as an exercise to practice React.
 
