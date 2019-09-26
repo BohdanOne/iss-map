@@ -5,6 +5,7 @@ import axios from 'axios';
 import '../css/Map.css';
 
 import ISS from './ISS';
+import DistanceCounter from './DistanceCounter';
 
 class Map extends React.Component {
   constructor(props){
@@ -39,6 +40,7 @@ class Map extends React.Component {
   render () {
     return (
       <div className="map-container">
+        <DistanceCounter lat={this.state.lat} lng ={this.state.lng} />
         <GoogleMapReact
           bootstrapURLKeys={{ key: ''}} // Insert your own api key from Google Maps
           defaultCenter={ this.props.center }
