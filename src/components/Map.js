@@ -2,6 +2,8 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import axios from 'axios';
 
+import '../css/Map.css';
+
 import ISS from './ISS';
 
 class Map extends React.Component {
@@ -36,9 +38,9 @@ class Map extends React.Component {
 
   render () {
     return (
-      <div style={{ height: "90vh", width: "100%" }}>
+      <div className="map-container">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: ''}} // Insert your own api key from Google Maps
+          bootstrapURLKeys={{ key: 'AIzaSyA0_VDHRxPPIW5nv4PReVhNXrLwcGVXWwE'}} // Insert your own api key from Google Maps
           defaultCenter={ this.props.center }
           defaultZoom={ this.props.zoom }
           center={{lat: this.state.lat, lng: this.state.lng}}

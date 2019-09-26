@@ -1,0 +1,10 @@
+.marker {
+  align-items: center;
+  background-color: rgba(255, 0, 0, .8);
+  border-radius: 50%;
+  display: flex;
+  fill: #fff;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
